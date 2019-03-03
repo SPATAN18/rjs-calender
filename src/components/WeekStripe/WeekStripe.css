@@ -1,0 +1,11 @@
+.WeekStripeMainDiv {
+  width: 700px;
+  display: flex;
+}
+.WeekStripeMainDiv div {
+  width: 100px;
+  height: 80px;
+}
+.WeetStripeDay:nth-of-type(even) {
+  background-color: silver;
+}
