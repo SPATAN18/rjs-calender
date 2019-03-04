@@ -1,16 +1,15 @@
 import React from "react";
 import "./WeekStripe.css";
+import { weekDays, shortenDayName } from "../../utils";
 
 const WeekStripe = () => {
   return (
     <div className="WeekStripeMainDiv">
-      <div className="WeetStripeDay">MON</div>
-      <div className="WeetStripeDay">TUE</div>
-      <div className="WeetStripeDay">WED</div>
-      <div className="WeetStripeDay">THU</div>
-      <div className="WeetStripeDay">FRI</div>
-      <div className="WeetStripeDay">SAT</div>
-      <div className="WeetStripeDay">SUN</div>
+      {weekDays.map((day, index) => (
+        <div key={index} className="WeetStripeDay">
+          {shortenDayName(day)}
+        </div>
+      ))}
     </div>
   );
 };

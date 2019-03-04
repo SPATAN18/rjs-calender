@@ -1,28 +1,7 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import "./DateComponent.css";
 
-class Date extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: "Sk",
-      date: 2
-    };
-  }
-  componentWillMount() {
-    console.log("component is mounting");
-  }
-  componentDidMount() {
-    console.log("componet mounted");
-  }
-  componentWillUnmount() {
-    console.log("Component will unmount");
-  }
-  onDivClick = () => {
-    this.setState({
-      date: 4
-    });
-  };
+class Date extends PureComponent {
   render() {
     const { events, day, week, month, year } = this.props;
     return (
