@@ -109,7 +109,6 @@ export const dayOnFirstdate = (date = new Date()) => {
 
 export const daysArrayForMonth = (date = new Date()) => {
   const firstDay = date;
-  console.log("first day", firstDay);
   firstDay.setDate(1);
   const dayNo = firstDay.getDay();
   let daysArray = [];

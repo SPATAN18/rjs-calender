@@ -8,6 +8,7 @@ import {
   prevMonthDate,
   getMonthName
 } from "../../utils";
+import CalEvent from "../../CalEvent";
 
 class MonthView extends Component {
   constructor() {
@@ -33,6 +34,8 @@ class MonthView extends Component {
 
   render() {
     const { date } = this.state;
+    const newCalEvent = new CalEvent();
+    newCalEvent.saveEvent();
     return (
       <div className="MonthViewParentDiv">
         <p>{getMonthName(date)}</p>
